@@ -1,0 +1,30 @@
+======================================================================
+Experiment 2: Exotic pricing under equally calibrated models
+======================================================================
+
+[1/4] Loading eSSVI target marginals ...
+      Target maturities: [0.25, 0.5, 1.0, 2.0, 3.0]
+
+[2/4] Generating calibrated quarterly paths ...
+  → Bass LV ... done  (0.1s)
+  → Heston SKR ... done  (89.6s)
+  → 3/2 SKR ... done  (91.1s)
+  → Bergomi-1F SKR ... done  (91.7s)
+
+[3/4] Pricing exotics (base case) ...
+
+  Model                        RC price    RC se    Paper RC    AC price    AC se    Paper AC
+  ------------------------------------------------------------------------------------------
+  Bass LV                       119.891    0.110     113.987     108.063    0.128     104.899
+  Heston SKR                    121.716    0.063     122.000     110.219    0.121     106.834
+  3/2 SKR                       115.988    0.067     116.991     108.023    0.136     106.444
+  Bergomi-1F SKR                119.802    0.060     120.144     109.561    0.125     106.800
+
+[4/4] Running sensitivity analyses ...
+  RC sensitivity plot saved: /workspace/project/results/exp2_rc_sensitivity.png
+  AC sensitivity plot saved: /workspace/project/results/exp2_ac_sensitivity.png
+  Price tables saved: /workspace/project/results/exp2_rc_prices.csv, /workspace/project/results/exp2_ac_prices.csv
+
+======================================================================
+Experiment 2 complete.
+======================================================================

@@ -1,0 +1,72 @@
+======================================================================
+Experiment 1: Vanilla calibration — SKR overlays on SPX eSSVI smiles
+======================================================================
+
+[1/5] Building eSSVI target marginals and smiles ...
+      Maturities: [0.25, 0.5, 1.0, 2.0, 3.0]
+      Strike range: [0.3679, 1.4918]  (60 strikes)
+
+[2/5] Calibrating models ...
+  → Bass LV ... done  (0.0s)
+  → Heston SKR ... done  (89.7s)
+  → 3/2 SKR ... done  (90.8s)
+  → Bergomi-1F SKR ... done  (91.3s)
+
+[3/5] Repricing calls and computing implied vols ...
+  Repricing done.
+
+[4/5] Computing IV RMSE ...
+  Model                      T=0.25  T=0.50  T=1.00  T=2.00  T=3.00
+  -----------------------------------------------------------------
+  Bass LV                    0.0149  0.0232  0.0046  0.0342  0.0255
+  Heston SKR                 0.0113  0.0313  0.0106  0.0400  0.0315
+  3/2 SKR                    0.0113  0.0313  0.0106  0.0400  0.0315
+  Bergomi-1F SKR             0.0113  0.0313  0.0106  0.0400  0.0315
+
+[5/5] Saving plots and calibration summary ...
+  Figure 5 saved: /workspace/project/results/fig5_smile_repricing_all_models.png
+
+=================================================
+  SKR Calibration Summary — Heston SKR
+-------------------------------------------------
+    Maturity   N_iter    W1 (final)    Mart. res.
+-------------------------------------------------
+  T=0.250           1      0.000000      0.000028
+  T=0.500         100      0.000000      0.000927
+  T=1.000         100      0.000000      0.000577
+  T=2.000         100      0.000000      0.011746
+  T=3.000         100      0.000162      0.004954
+-------------------------------------------------
+  Diagnostics saved: /workspace/project/results/exp1_skr_diagnostics_Heston_SKR.txt
+
+=================================================
+  SKR Calibration Summary — 3/2 SKR
+-------------------------------------------------
+    Maturity   N_iter    W1 (final)    Mart. res.
+-------------------------------------------------
+  T=0.250           1      0.000000      0.000028
+  T=0.500         100      0.000001      0.000927
+  T=1.000         100      0.000000      0.000577
+  T=2.000         100      0.000000      0.011746
+  T=3.000         100      0.000113      0.004922
+-------------------------------------------------
+  Diagnostics saved: /workspace/project/results/exp1_skr_diagnostics_3_2_SKR.txt
+
+=================================================
+  SKR Calibration Summary — Bergomi-1F SKR
+-------------------------------------------------
+    Maturity   N_iter    W1 (final)    Mart. res.
+-------------------------------------------------
+  T=0.250           1      0.000000      0.000028
+  T=0.500         100      0.000000      0.000927
+  T=1.000         100      0.000000      0.000577
+  T=2.000         100      0.000000      0.011746
+  T=3.000         100      0.000136      0.004940
+-------------------------------------------------
+  Diagnostics saved: /workspace/project/results/exp1_skr_diagnostics_Bergomi-1F_SKR.txt
+  Timing table saved: /workspace/project/results/exp1_timing.csv
+  IV RMSE table saved: /workspace/project/results/exp1_iv_rmse.csv
+
+======================================================================
+Experiment 1 complete.
+======================================================================
